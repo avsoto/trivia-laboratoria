@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/logo.png?v=1710862626520">
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/logo.png?v=1710811932404">
+    </header>
+
+    <div class="login-container" id="login">
+        <h1>¡Bienvenido a la Trivia!</h1>
+        <p>¿Cuál es tu nombre?</p>
+
+        <input class="sendname" type="text" id="nombre"
+          placeholder="Ingresa tu nombre aquí"/>
+        <button class="button-login" type="button" id="button-nombre" onclick="mostrarNombre()">¡Jugar!</button>
+    </div>
+  
+    <div class="choose-subject" id="subject">
+        <h1 id="playerName"></h1>
+        <p>¿Qué tema prefieres?</p>
+        <button class="button-subject" type="button" id="subject-1" onclick="preguntasCientificasPeruanas()">Científicas Peruanas</button>
+        <button class="button-subject" type="button" id="subject-2" onclick="preguntasDivulgadorasPeruanas()">Divulgadoras Peruanas</button>
+    </div>
+  
+  
+
+  <!-- TEMA: Preguntas de Científicas peruanas  -->
+  <div class="cientificasPreguntaUno" id="cientificasPreguntaUno">
+    <h2 id="preguntauno">¿Qué logro significativo alcanzó Nelly Carrillo Tarazona en el campo de la biología en la Universidad Nacional Mayor de San Marcos?</h2>
+        <img class="imagenuno" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/nelly.jpeg?v=1710862632319">
+            <button class="button-answer" type="button" id="answer-1" onclick="evaluarRespuestaP1(1)">Descubrió una nueva especie de planta endémica de la selva peruana.</button>
+            <button class="button-answer" type="button" id="answer-2" onclick="evaluarRespuestaP1(2)">Publicó un libro sobre la biodiversidad marina del litoral peruano.</button>
+            <button class="button-answer" type="button" id="answer-3" onclick="evaluarRespuestaP1(3)">Fundó el primer laboratorio de biología molecular de la universidad.</button>
+            <button class="button-next" type="button" id="nextone" onclick="preguntaDosCientificas()">Siguiente</button>
+
+  </div>
+  
+  <div class="cientificasPreguntaDos" id="cientificasPreguntaDos">
+    <h2 id="preguntados">¿Cuál de las siguientes áreas es en la que Laura Rodríguez Dulanto ha realizado contribuciones significativas?</h2>
+        <img class="imagendos" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/laura-dulanto.jpeg?v=1710941310409"><br>
+            <button class="button-answer" type="button" id="answer-4" onclick="evaluarRespuestaP2(4)">Astronomía</button>
+            <button class="button-answer" type="button" id="answer-5" onclick="evaluarRespuestaP2(5)">Biología marina</button>
+            <button class="button-answer" type="button" id="answer-6" onclick="evaluarRespuestaP2(6)">Ingeniería ambiental</button>
+            <button class="button-next" type="button" id="nexttwo" onclick="preguntaTresCientificas()">Siguiente</button>
+  </div>
+  
+  <div class="cientificasPreguntaTres" id="cientificasPreguntaTres">
+    <h2 id="preguntatres">¿Cuál fue el descubrimiento más destacado de María Luisa Aguilar en el campo de la paleozoología?</h2>
+        <img class="imagentres" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/maria-luisa.png?v=1710941386637">
+            <button class="button-answer" type="button" id="answer-7" onclick="evaluarRespuestaP3(7)">El análisis de fósiles de mamíferos prehistóricos en la región amazónica del Perú.</button>
+            <button class="button-answer" type="button" id="answer-8" onclick="evaluarRespuestaP3(8)">La identificación de nuevos géneros y especies de reptiles marinos en la costa peruana.</button>
+            <button class="button-answer" type="button" id="answer-9" onclick="evaluarRespuestaP3(9)">El estudio de la evolución de los dinosaurios terrestres en los Andes peruanos.</button>
+            <button class="button-next" type="button" id="nextFinal" onclick="irFinal()">Finalizar</button>
+
+  </div>
+  
+  
+  <!-- TEMA: Preguntas de Divulgadoras peruanas  -->
+
+   <div class="divulgadorasPreguntaUno" id="divulgadorasPreguntaUno">
+    <h2 id="primeraPregunta">¿Cuál de las siguientes divulgadoras científicas peruanas se enfoca en el estudio de la ecología y la conservación de la biodiversidad?</h2>
+        <img class="imagenCuatro" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/1619202158466.jpeg?">
+            <button class="button-answer" type="button" id="answer-10" onclick="evaluarRespuestaP4(10)">Alejandra Ruiz León</button><br><!-- correcta  -->
+            <button class="button-answer" type="button" id="answer-11" onclick="evaluarRespuestaP4(11)">Denisse Sotomayor</button><br>
+            <button class="button-answer" type="button" id="answer-12" onclick="evaluarRespuestaP4(12)">Natalia Sobrevilla</button><br>
+            <button class="button-next" type="button" id="siguienteuno" onclick="siguienteuno()">Siguiente</button>
+  
+  </div>
+  
+  <div class="divulgadorasPreguntaDos" id="divulgadorasPreguntaDos">
+    <h2 id="segundaPregunta">¿Cuál de las siguientes áreas de investigación es la principal especialidad de la divulgadora cientifica Aracely Quispe Neira?</h2>
+        <img class="imagenCinco" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/Qispe-Neira.jpeg?v=1710882319154"><br>
+            <button class="button-answer" type="button" id="answer-13" onclick="evaluarRespuestaP5(13)">Biología marina</button><br>
+            <button class="button-answer" type="button" id="answer-14" onclick="evaluarRespuestaP5(14)">Astronomía y astrofísica</button><br><!-- correcta  -->
+            <button class="button-answer" type="button" id="answer-15" onclick="evaluarRespuestaP5(15)">Ingeniería genética</button><br>
+            <button class="button-next" type="button" id="siguientedos" onclick="siguientedos()">Siguiente</button>
+
+  </div>
+  
+  <div class="divulgadorasPreguntaTres" id="divulgadorasPreguntaTres">
+    <h2 id="terceraPregunta">¿Cuál de las siguientes afirmaciones es verdadera sobre Carla Gonzales, PHd en Ciencias con mención en Fisiología?</h2>
+        <img class="imagenSeis" src="https://cdn.glitch.global/941f90d0-d20d-4cac-b11c-5d0dbed41433/CarlaGonxales5-300x300.jpg?v=1710944562461">
+            <button class="button-answer" type="button" id="answer-16" onclick="evaluarRespuestaP6(16)">Especialista en tecnología espacial.</button><br>
+            <button class="button-answer" type="button" id="answer-17" onclick="evaluarRespuestaP6(17)">Investigadora en medicina tradicional china.</button><br>
+            <button class="button-answer" type="button" id="answer-18" onclick="evaluarRespuestaP6(18)">Expertiza en la diversificación y valorización de productos andinos.</button><br><!-- correcta  -->
+            <button class="button-next" type="button" id="siguientetres" onclick="siguientetres()">Finalizar</button>
+  
+  </div>
+  
+    <!-- RESULTADOS -->
+  <div class="resultados" id="resultados">
+    <h2>Resultados</h2>
+    <h3 id="puntuacion"></h3>
+            <button class="button-next" type="button" id="siguientecuatro" onclick="volverAInicio()">Volver a inicio</button><br>
+            <button class="button-next" type="button" id="mostrarTema" onclick="volverAElegirTema()">Elegir otro tema</button>
+  </div>
+  
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>

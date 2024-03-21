@@ -1,0 +1,136 @@
+body{
+  font-family: sans-serif;
+  background-color: #48B7A4; 
+  width: 500px;
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top: 150px;
+}
+
+.logo{
+max-width: 400px;
+max-height: 203px;
+}
+
+/*PRIMERA PANTALLA*/
+.login-container, .choose-subject, .cientificasPreguntaUno, .cientificasPreguntaDos, .cientificasPreguntaTres, .divulgadorasPreguntaUno, .divulgadorasPreguntaDos, .divulgadorasPreguntaTres, .resultados {
+padding: 20px 10px 40px 10px;
+margin: 20px 0px 40px 0px;
+background-color: #ffffff3a;
+border-radius: 50px;
+box-shadow: -1px 2px 7px 1px rgba(217, 217, 217, 0.466);
+text-align: center;
+}
+
+.choose-subject, .cientificasPreguntaUno, .cientificasPreguntaDos, .cientificasPreguntaTres, .divulgadorasPreguntaUno, .divulgadorasPreguntaDos, .divulgadorasPreguntaTres, .resultados{
+display:none;
+}
+
+.button-login{
+padding: 20px;
+margin: 0 70px 10px 70px;
+width: 350px;
+border-radius: 20px;
+background-color:#d5ffff;
+border:none;
+}
+
+.button-login:hover{
+background-color:gold;
+color:white;
+border-color: none;
+}
+
+.sendname{
+padding: 20px;
+margin: 0 70px 10px 70px;
+width: 300px;
+text-align: center;
+border-radius: 20px;
+}
+
+h1, p, h2,h3{
+color:white;
+}
+
+
+/*SEGUNDA PANTALLA*/
+
+.button-subject{
+margin-top: 20px;
+height: 180px;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+box-shadow: -1px 2px 7px 1px rgba(217, 217, 217, 0.466);
+border:none;
+}
+
+.button-subject:hover{
+background-color:gold;
+color:white;
+}
+
+/*TERCERA PANTALLA*/
+
+.button-answer, .button-next{
+margin-top: 20px;
+height: 50px;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 20px;
+box-shadow: -1px 2px 7px 1px rgba(217, 217, 217, 0.466);
+border:none;
+}
+
+.button-answer:hover{
+background-color:grey;
+color:white;
+}
+
+.button-next:hover{
+background-color:gold;
+color:white;
+}
+
+.imagentres{
+width: 300px;
+height: 300px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
+
+.imagenCuatro{
+width: 290px;
+height: 320px;
+padding-left: 50px;
+padding-right: 20px;
+}
+
+.imagendos{
+width: 300px;
+height: 400px;
+}
+
+.imagenSeis{
+width: 290px;
+height: 320px;
+padding-left: 50px;
+padding-right: 20px;
+}
+
+
+
+/*CLASES MAPEO RESPUESTA*/
+
+
+.correct{
+background: #9aeabc;
+}
+
+.incorrect{
+background: #ff9393;
+}
+
+
