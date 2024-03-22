@@ -47,7 +47,7 @@ function siguientetres(){
 
 /* EVALUACIÓN DE RESPUESTAS */
 
-let aciertos = 0;
+let aciertos = 0; 
 
 /*CIENTIFICAS PERUANAS*/
 
